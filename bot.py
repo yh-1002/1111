@@ -14,7 +14,7 @@ async def echo(update: Update, context: CallbackContext) -> None:
     elif 'bye' in user_message:
         response = '滾'
     else:
-        response = user_message
+        response = '請重新輸入'
     
     # 打印收到的消息和回复到控制台
     print(f"Received message: {update.message.text}")
