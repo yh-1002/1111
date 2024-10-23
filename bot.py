@@ -8,17 +8,10 @@ async def start(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text('請輸入股價代碼')
 
 async def echo(update: Update, context: CallbackContext) -> None:
-    user_message = update.message.text.lower()
-    if len(user_message)==4 :
-        response = '成功'
-    else:
-        response = '請重新輸入'
-    
-    # 打印收到的消息和回复到控制台
-    print(f"Received message: {update.message.text}")
-    print(f"Response: {response}")
+    # 打印收到的消息到控制台
+    print(update.message.text)
     # 回显消息
-    await update.message.reply_text(response)
+    await update.message.reply_text(update.message.text)
 
 def main():
     # 创建 Application 对象并传入 Bot Token
