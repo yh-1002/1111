@@ -20,7 +20,7 @@ async def echo(update: Update, context: CallbackContext) -> None:
     print(f"Received message: {update.message.text}")
     print(f"Response: {response}")
     # 回显消息
-    await update.message.reply_text(update.message.text)
+    await update.message.reply_text(response)
 
 def main():
     # 创建 Application 对象并传入 Bot Token
