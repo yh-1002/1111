@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # 替换为你的 Bot Token
-TOKEN = 'YOUR_BOT_TOKEN'
+TOKEN = '7913141683:AAHuJXDJ_uyJQKAGnsP0neeVgei1SOMLoNI'
 
 def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Hello! Send me a message and I will echo it!')
