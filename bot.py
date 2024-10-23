@@ -9,10 +9,8 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 async def echo(update: Update, context: CallbackContext) -> None:
     user_message = update.message.text.lower()
-    if 'hello' in user_message:
-        response = '你好'
-    elif 'bye' in user_message:
-        response = '滾'
+    if len(user_message) =4 :
+        response = '成功'
     else:
         response = '請重新輸入'
     
