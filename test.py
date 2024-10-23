@@ -25,7 +25,7 @@ async def echo(update: Update, context: CallbackContext) -> None:
     e = df[df['Code'] == user_message]['Transaction']
     x = df[df['Code'] == user_message]['Name']
     if b.empty:
-      response = f"輸入不正確 {user_message} "
+      response = f"{user_message}\n輸入不正確或查無資料"
     else:
       response = f"{user_message} {x.values[0]}\n最高價為: {b.values[0]}\n最低價為: {c.values[0]}\n漲跌差為: {d.values[0]}\n成交量為: {e.values[0]}"
 
