@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext
 
 import requests
-import json
+import simplejson as json
 import pandas
 
 # 替换为你的 Bot Token
