@@ -8,8 +8,17 @@ async def start(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text('你好 請輸入股票代碼')
 
 async def echo(update: Update, context: CallbackContext) -> None:
-    # 打印收到的消息到控制台
-    print(update.message.text)
+    user_message = update.message.text.lower()
+    if 'hello' in user_message:
+        response = 'Hi there! How can I help you today?'
+    elif 'bye' in user_message:
+        response = 'Goodbye! Have a great day!'
+    else:
+        response = update.message.text
+    
+    # 打印收到的消息和回复到控制台
+    print(f"Received message: {update.message.text}")
+    print(f"Response: {response}")
     # 回显消息
     await update.message.reply_text(update.message.text)
 
