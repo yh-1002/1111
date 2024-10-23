@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 TOKEN = '7913141683:AAHuJXDJ_uyJQKAGnsP0neeVgei1SOMLoNI'
 
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text('Hello! Send me a message and I will echo it!')
+    await update.message.reply_text('你好 請輸入股票代碼')
 
 async def echo(update: Update, context: CallbackContext) -> None:
     # 打印收到的消息到控制台
