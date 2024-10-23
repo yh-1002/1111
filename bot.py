@@ -14,7 +14,7 @@ async def echo(update: Update, context: CallbackContext) -> None:
     elif 'bye' in user_message:
         response = 'Goodbye! Have a great day!'
     else:
-        response = update.message.text
+        response = user_message
     
     # 打印收到的消息和回复到控制台
     print(f"Received message: {update.message.text}")
