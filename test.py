@@ -1,9 +1,9 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext
 
-import requests
+import requests as res
 import simplejson as json
-import pandas
+import pandas as pd 
 
 # 替换为你的 Bot Token
 TOKEN = '7913141683:AAHuJXDJ_uyJQKAGnsP0neeVgei1SOMLoNI'
