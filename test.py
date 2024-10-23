@@ -1,10 +1,10 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext
 
-import requests as res
-import json
-import pandas as pd
-import matplotlib.pyplot as plt
+from python import requests as res
+from python import json
+from python import pandas as pd
+from python import matplotlib.pyplot as plt
 
 # 替换为你的 Bot Token
 TOKEN = '7913141683:AAHuJXDJ_uyJQKAGnsP0neeVgei1SOMLoNI'
