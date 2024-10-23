@@ -9,7 +9,7 @@ import pandas as pd
 TOKEN = '7913141683:AAHuJXDJ_uyJQKAGnsP0neeVgei1SOMLoNI'
 
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text('請輸入股價代碼')
+    await update.message.reply_text('請輸入要查詢的股價代碼')
 
 async def echo(update: Update, context: CallbackContext) -> None:
     user_message = update.message.text.lower()
