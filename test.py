@@ -15,8 +15,8 @@ async def echo(update: Update, context: CallbackContext) -> None:
     user_message = update.message.text.lower()
 
   
-    url_oneday='https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'
-    re=res.get(url_oneday)
+    url='https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'
+    re=res.get(url)
     data=json.loads(re.text)
     df=pd.DataFrame(data)
     b = df[df['Code'] == user_message]['HighestPrice']
