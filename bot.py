@@ -10,9 +10,9 @@ async def start(update: Update, context: CallbackContext) -> None:
 async def echo(update: Update, context: CallbackContext) -> None:
     user_message = update.message.text.lower()
     if 'hello' in user_message:
-        response = 'Hi there! How can I help you today?'
+        response = '你好'
     elif 'bye' in user_message:
-        response = 'Goodbye! Have a great day!'
+        response = '滾'
     else:
         response = user_message
     
