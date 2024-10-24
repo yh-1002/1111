@@ -19,15 +19,17 @@ async def echo(update: Update, context: CallbackContext) -> None:
     re=res.get(url)
     data=json.loads(re.text)
     df=pd.DataFrame(data)
+    a = df[df['Code'] == user_message]['OpeningPrice']
     b = df[df['Code'] == user_message]['HighestPrice']
     c = df[df['Code'] == user_message]['LowestPrice']
-    d = df[df['Code'] == user_message]['Change']
-    e = df[df['Code'] == user_message]['Transaction']
+    d = df[df['Code'] == user_message]['ClosingPrice']
+    e = df[df['Code'] == user_message]['Change']
+    f = df[df['Code'] == user_message]['Transaction']
     x = df[df['Code'] == user_message]['Name']
     if b.empty:
       response = f"{user_message}\n輸入不正確或查無資料"
     else:
-      response = f"{user_message} {x.values[0]}\n最高價為: {b.values[0]}\n最低價為: {c.values[0]}\n漲跌差為: {d.values[0]}\n成交量為: {e.values[0]}"
+      response = f"{user_message} {x.values[0]}\n開盤價為: {a.values[0]}\n最高價為: {b.values[0]}\n最低價為: {c.values[0]}\n收盤價為: {d.values[0]}\n漲跌差為: {e.values[0]}\n成交量為: {f.values[0]}"
 
 
   
